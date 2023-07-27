@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+.body {
+  max-width: 600px;
+  height: 900px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.cssTheme {
+  padding: 5px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: solid 3px rgb(108, 169, 255);
+  background-color: rgb(205, 231, 255);
+  color: black;
+  box-shadow: 6px 6px 22px -10px #2d2d2d;
+}
+
+input.cssTheme:hover,
+select.cssTheme:hover {
+  background-color: rgb(255, 246, 236);
+}
+
+input.cssTheme:active,
+select.cssTheme:active {
+  background-color: rgb(255, 238, 219);
+  border: solid 3px rgb(55, 137, 252);
+}
+
+.header {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.header__title {
+  margin: 0;
+  text-align: center;
+}

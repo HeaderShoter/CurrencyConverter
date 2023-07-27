@@ -1,0 +1,45 @@
+.form {
+  font-size: 150%;
+}
+
+.form__fieldset {
+  margin-bottom: 20px;
+}
+
+.form__legend {
+  margin-left: 20px;
+  padding: 7px;
+  font-weight: 700;
+}
+
+.form__paragraph {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.form__label {
+  text-align: center;
+}
+
+.form__label--hidden {
+  font-size: 0px;
+}
+
+.form__input {
+  padding: 20px;
+  background-color: white;
+  margin: 10px auto;
+  width: 250px;
+  height: 54px;
+  font-size: 25px;
+  box-shadow: none;
+}
+
+.form__selectCurrency {
+  font-size: 25px;
+  height: 54px;
+  width: 54px;
+  background-color: white;
+  margin: 10px auto;
+  box-shadow: none;
+}

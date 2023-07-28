@@ -10,7 +10,7 @@ html {
 
 .body {
   max-width: 600px;
-  height: 900px;
+  height: 1000px;
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -27,13 +27,11 @@ html {
   box-shadow: 6px 6px 22px -10px #2d2d2d;
 }
 
-input.cssTheme:hover,
-select.cssTheme:hover {
+.cssTheme--clickable:hover {
   background-color: rgb(255, 246, 236);
 }
 
-input.cssTheme:active,
-select.cssTheme:active {
+.cssTheme--clickable:active {
   background-color: rgb(255, 238, 219);
   border: solid 3px rgb(55, 137, 252);
 }

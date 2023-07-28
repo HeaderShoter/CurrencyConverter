@@ -16,9 +16,9 @@
   <body class="body">
     <header class="header cssTheme">
       <h1 class="header__title">Kalkulator Walut</h1>
-      <p>Kalkulator wylicza kwotę, jaką otrzymałbyś we&nbsp;wskazanej walucie ze&nbsp;sprzedaży w innej wybranej waluty.</p>
-      <p>Wpisz dowolną kwotę w polu <em>Sprzedaż</em> oraz wybierz walutę, w&nbsp;jakiej ją podajesz, a w polu <em>Należność</em> wyświetli się kwota w&nbsp;wybranej innej walucie, jaką otrzymałbyś za&nbsp;sprzedaż tych środków.</p>
-      <p>Kalkulator wylicza także jaką ilość waluty musiałbyś sprzedać, żeby otrzymać wybraną kwotę w innej walucie. W tym celu wpisz wybraną kwotę w polu <em>Należność</em>, wybrawszy rodzaj otrzymywanej i sprzedawanej waluty.</p>
+      <p>Kalkulator wylicza kwotę, jaką otrzymałbyś we&nbsp;wskazanej walucie ze&nbsp;sprzedaży innej wybranej waluty.</p>
+      <p>W tym celu wybierz rodzaj waluty na&nbsp;sprzedaż oraz walutę, w&nbsp;której chcesz uzyskać należność, a&nbsp;kalkulator będzie wyliczać odpowiednie wartości w&nbsp;trakcie wprowadzania wybranych kwot w&nbsp;polu <em>Sprzedaż</em>.</p>
+      <p>Kalkulator wylicza także jaką ilość waluty musiałbyś sprzedać, żeby otrzymać wybraną kwotę w innej walucie. W tym celu wprowadź wybraną kwotę w polu <em>Należność</em>, wybrawszy rodzaj otrzymywanej i sprzedawanej waluty.</p>
       <p><b>Wszystkie wyliczenia opierają się na&nbsp;kursie walut zastanym dnia&nbsp;24&nbsp;lipca&nbsp;2023&nbsp;roku.</b></p>
     </header>
 
@@ -26,10 +26,10 @@
       <fieldset class="form__fieldset cssTheme">
         <legend class="form__legend cssTheme">Kalkulator</legend>
         <p class="form__paragraph">
-          <label class="form__label"><strong class="form__labelText">Sprzedaż</strong><br /><input class="form__input js-sellValue cssTheme" type="number" step="0.01" min="0" name="sell" placeholder="0,00" /></label>
+          <label class="form__label"><strong class="form__labelText">Sprzedaż</strong><br /><input class="form__input js-sellValue cssTheme cssTheme--clickable" type="number" step="0.01" min="0" name="sell" placeholder="0,00" /></label>
           <label>
             <strong class="form__label--hidden">Wybierz sprzedawaną walutę</strong>
-            <select class="form__selectCurrency js-sellType cssTheme" name="sellType">
+            <select class="form__selectCurrency js-sellType cssTheme cssTheme--clickable" name="sellType">
               <option value="EUR">€</option>
               <option value="USD">$</option>
               <option value="GBP">£</option>
@@ -38,10 +38,10 @@
           </label>
         </p>
         <p class="form__paragraph">
-          <label class="form__label"><strong class="form__labelText">Należność</strong><br /><input class="form__input js-chargeValue cssTheme" type="number" step="0.01" min="0" name="charge" placeholder="0,00" /></label>
+          <label class="form__label"><strong class="form__labelText">Należność</strong><br /><input class="form__input js-chargeValue cssTheme cssTheme--clickable" type="number" step="0.01" min="0" name="charge" placeholder="0,00" /></label>
           <label>
             <strong class="form__label--hidden">Wybierz walutę którą otrzymasz</strong>
-            <select class="form__selectCurrency js-chargeType cssTheme" name="chargeType">
+            <select class="form__selectCurrency js-chargeType cssTheme cssTheme-clickable" name="chargeType">
               <option value="EUR">€</option>
               <option value="USD" selected>$</option>
               <option value="GBP">£</option>

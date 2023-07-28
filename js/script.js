@@ -5,8 +5,6 @@ let chargeValue = document.querySelector(".js-chargeValue");
 let sellType = document.querySelector(".js-sellType");
 let chargeType = document.querySelector(".js-chargeType");
 
-sellValue.focus();
-
 sellValue.addEventListener("input", () => {
   if (sellType.value === chargeType.value) {
     chargeValue.value = (+sellValue.value).toFixed(2);

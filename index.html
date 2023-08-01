@@ -14,7 +14,7 @@
   </head>
 
   <body class="body">
-    <header class="header cssTheme">
+    <header class="header objectTheme">
       <h1 class="header__title">Kalkulator Walut</h1>
       <p>Kalkulator wylicza kwotę, jaką otrzymałbyś we&nbsp;wskazanej walucie ze&nbsp;sprzedaży innej wybranej waluty.</p>
       <p>W tym celu wybierz rodzaj waluty na&nbsp;sprzedaż oraz walutę, w&nbsp;której chcesz uzyskać należność, a&nbsp;kalkulator będzie wyliczać odpowiednie wartości w&nbsp;trakcie wprowadzania wybranych kwot w&nbsp;polu <em>Sprzedaż</em>.</p>
@@ -23,13 +23,12 @@
     </header>
 
     <form class="form">
-      <fieldset class="form__fieldset cssTheme">
-        <legend class="form__legend cssTheme">Kalkulator</legend>
+      <fieldset class="form__fieldset objectTheme">
+        <legend class="form__legend objectTheme">Kalkulator</legend>
         <p class="form__paragraph">
-          <label class="form__label"><strong class="form__labelText">Sprzedaż</strong><br /><input class="form__input js-sellValue cssTheme cssTheme--clickable" type="number" step="0.01" min="0" name="sell" placeholder="0,00" /></label>
+          <label class="form__label"><strong class="form__labelText">Sprzedaż</strong><br /><input class="form__input js-inputSell objectTheme objectTheme--clickable" type="number" step="0.01" min="0" name="sell" placeholder="0,00" /></label>
           <label>
-            <strong class="form__label--hidden">Wybierz sprzedawaną walutę</strong>
-            <select class="form__selectCurrency js-sellType cssTheme cssTheme--clickable" name="sellType">
+            <select class="form__select js-selectSell objectTheme objectTheme--clickable" name="sellType">
               <option value="EUR">€</option>
               <option value="USD">$</option>
               <option value="GBP">£</option>
@@ -38,10 +37,9 @@
           </label>
         </p>
         <p class="form__paragraph">
-          <label class="form__label"><strong class="form__labelText">Należność</strong><br /><input class="form__input js-chargeValue cssTheme cssTheme--clickable" type="number" step="0.01" min="0" name="charge" placeholder="0,00" /></label>
+          <label class="form__label"><strong class="form__labelText">Należność</strong><br /><input class="form__input js-inputCharge objectTheme objectTheme--clickable" type="number" step="0.01" min="0" name="charge" placeholder="0,00" /></label>
           <label>
-            <strong class="form__label--hidden">Wybierz walutę którą otrzymasz</strong>
-            <select class="form__selectCurrency js-chargeType cssTheme cssTheme-clickable" name="chargeType">
+            <select class="form__select js-selectCharge objectTheme objectTheme--clickable" name="chargeType">
               <option value="EUR">€</option>
               <option value="USD" selected>$</option>
               <option value="GBP">£</option>

@@ -1,15 +1,15 @@
 console.log("Hello world!");
 
-let ratePLNEUR = 0.22;
+let ratePLNEUR = 0.23;
 let ratePLNUSD = 0.25;
 let ratePLNGBP = 0.19;
-let rateEURPLN = 4.45;
-let rateEURUSD = 1.11;
+let rateEURPLN = 4.44;
+let rateEURUSD = 1.10;
 let rateEURGBP = 0.86;
-let rateUSDPLN = 4.02;
-let rateUSDEUR = 0.90;
+let rateUSDPLN = 4.05;
+let rateUSDEUR = 0.91;
 let rateUSDGBP = 0.78;
-let rateGBPPLN = 5.16;
+let rateGBPPLN = 5.17;
 let rateGBPEUR = 1.16;
 let rateGBPUSD = 1.28;
 

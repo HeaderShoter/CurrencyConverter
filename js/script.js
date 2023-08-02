@@ -1,17 +1,17 @@
 console.log("Hello world!");
 
-let PLNEUR = 0.22;
-let PLNUSD = 0.25;
-let PLNGBP = 0.19;
-let EURPLN = 4.45;
-let EURUSD = 1.11;
-let EURGBP = 0.86;
-let USDPLN = 4.02;
-let USDEUR = 0.90;
-let USDGBP = 0.78;
-let GBPPLN = 5.16;
-let GBPEUR = 1.16;
-let GBPUSD = 1.28;
+let ratePLNEUR = 0.22;
+let ratePLNUSD = 0.25;
+let ratePLNGBP = 0.19;
+let rateEURPLN = 4.45;
+let rateEURUSD = 1.11;
+let rateEURGBP = 0.86;
+let rateUSDPLN = 4.02;
+let rateUSDEUR = 0.90;
+let rateUSDGBP = 0.78;
+let rateGBPPLN = 5.16;
+let rateGBPEUR = 1.16;
+let rateGBPUSD = 1.28;
 
 let inputSell = document.querySelector(".js-inputSell");
 let inputCharge = document.querySelector(".js-inputCharge");
@@ -21,29 +21,29 @@ let selectCharge = document.querySelector(".js-selectCharge");
 function setExchangeRate() {
   let exchange = selectSell.value + selectCharge.value;
   switch (exchange) {
-    case 'PLNEUR': window.exchangeRate = PLNEUR;
+    case 'PLNEUR': window.exchangeRate = ratePLNEUR;
       break;
-    case 'PLNUSD': window.exchangeRate = PLNUSD;
+    case 'PLNUSD': window.exchangeRate = ratePLNUSD;
       break;
-    case 'PLNGBP': window.exchangeRate = PLNGBP;
+    case 'PLNGBP': window.exchangeRate = ratePLNGBP;
       break;
-    case 'EURPLN': window.exchangeRate = EURPLN;
+    case 'EURPLN': window.exchangeRate = rateEURPLN;
       break;
-    case 'EURUSD': window.exchangeRate = EURUSD;
+    case 'EURUSD': window.exchangeRate = rateEURUSD;
       break;
-    case 'EURGBP': window.exchangeRate = EURGBP;
+    case 'EURGBP': window.exchangeRate = rateEURGBP;
       break;
-    case 'USDPLN': window.exchangeRate = USDPLN;
+    case 'USDPLN': window.exchangeRate = rateUSDPLN;
       break;
-    case 'USDEUR': window.exchangeRate = USDEUR;
+    case 'USDEUR': window.exchangeRate = rateUSDEUR;
       break;
-    case 'USDGBP': window.exchangeRate = USDGBP;
+    case 'USDGBP': window.exchangeRate = rateUSDGBP;
       break;
-    case 'GBPPLN': window.exchangeRate = GBPPLN;
+    case 'GBPPLN': window.exchangeRate = rateGBPPLN;
       break;
-    case 'GBPEUR': window.exchangeRate = GBPEUR;
+    case 'GBPEUR': window.exchangeRate = rateGBPEUR;
       break;
-    case 'GBPUSD': window.exchangeRate = GBPUSD;
+    case 'GBPUSD': window.exchangeRate = rateGBPUSD;
       break;
     default: window.exchangeRate = 1;
   }
@@ -61,27 +61,25 @@ function charge() {
   inputSell.value = (chargeValue / exchangeRate).toFixed(2);
 };
 
-function inputActive() {
-  if (document.activeElement === inputSell) { window.inputFocus = 'sell' };
-  if (document.activeElement === inputCharge) { window.inputFocus = 'charge' };
+function setInputIndicate() {
+  if (document.activeElement === inputSell) { window.inputIndicate = 'sell' };
+  if (document.activeElement === inputCharge) { window.inputIndicate = 'charge' };
 };
 
 inputSell.addEventListener("input", () => {
   sell();
-  inputActive();
+  setInputIndicate();
 });
 
 inputCharge.addEventListener("input", () => {
   charge();
-  inputActive();
+  setInputIndicate();
 });
 
 selectSell.addEventListener("change", () => {
-  if (inputFocus === 'sell') { sell(); }
-  if (inputFocus === 'charge') { charge(); }
+  inputIndicate === 'sell' ? sell() : charge();
 });
 
 selectCharge.addEventListener("change", () => {
-  if (inputFocus === 'sell') { sell(); }
-  if (inputFocus === 'charge') { charge(); }
+  inputIndicate === 'sell' ? sell() : charge();
 });

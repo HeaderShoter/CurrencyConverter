@@ -14,3 +14,17 @@ You can chage marked currencys in any time. Then program will immediately recalc
 If you want to check how much money you should put to get required amount of other currency you can just type this amount in "Należność" and program will display how much money you would spend to get it.
 ## Conventions used
 Entire site has been coded with using BEM
+## Algorythm
+```mermaid
+graph LR
+X((Listening)) --> A
+X --> B
+X --> C
+X --> D
+A(Input Sprzedaż) -- Input --> E(Recalculate Należność)
+C(Change currency Sprzedaż) -- Change -->G{last input check}
+D(Change currency Należność) -- Change -->G
+G -- Sprzedaż --> E
+G -- Należność --> F
+B(Input Należność) -- Input --> F(Recalculate Sprzedaż)
+```

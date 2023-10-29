@@ -21,10 +21,10 @@ X((Listening)) --> A
 X --> B
 X --> C
 X --> D
-A(Input Sprzedaż) -- Input --> E(Recalculate Należność)
-C(Change currency Sprzedaż) -- Change -->G{last input check}
-D(Change currency Należność) -- Change -->G
-G -- Sprzedaż --> E
-G -- Należność --> F
-B(Input Należność) -- Input --> F(Recalculate Sprzedaż)
+A(Input ''Sprzedaż'') -- Input --> E(Recalculate ''Należność'')
+C(Change currency ''Sprzedaż'') -- Change -->G{last input check}
+D(Change currency ''Należność'') -- Change -->G
+G -- ''Sprzedaż'' --> E
+G -- ''Należność'' --> F
+B(Input ''Należność'') -- Input --> F(Recalculate ''Sprzedaż'')
 ```

@@ -1,19 +1,18 @@
 # Currency Converter
 ## What is my project
-This website project has been created by request of my web development course. I had to program from start to the end a simple but fully functioning currency converter.
-
+This website project was created at the request of my web development course. I had to program, from start to finish, a simple but fully functioning currency converter.
 [Demo](https://headershoter.github.io/CurrencyConverter/)
 ## Functions
-This currency converter gives user possibillity do check amount of money he will get when sell choosen amount of choosen currency.
-If you like you can also chceck how much money you would you need to sell to get needed amount of another currency.
+This currency converter gives the user the possibility to check the amount of money he will get when selling a chosen amount of chosen currency.
+If you like, you can also check how much money you would need to sell to get the needed amount of another currency.
 ## How it works
-To check how much money you will get after sale of your currency just start typing amount in "Sprzedaż". Then program will immediately calculate how much you will get depending on currency types marked next to the input fields and display result in "Należność"
+To check how much money you will get after selling your currency, just start typing the amount in "Sprzedaż". Then the program will immediately calculate how much you will get depending on the currency types marked next to the input fields and display the result in "Należność".
 
-You can chage marked currencys in any time. Then program will immediately recalculates result for changed currency configuration starting with non latest input field.
+You can change marked currencies at any time. Then the program will immediately recalculate the result for the changed currency configuration, starting with the non-latest input field.
 
-If you want to check how much money you should put to get required amount of other currency you can just type this amount in "Należność" and program will display how much money you would spend to get it.
+If you want to check how much money you should spend to get the required amount of another currency, you can just type this amount in "Należność" and the program will display how much money you would spend to get it.
 ## Conventions used
-Entire site has been coded with using BEM
+The entire site has been coded using BEM
 ## Algorythm
 ```mermaid
 graph LR

@@ -1,0 +1,12 @@
+.header {
+  margin-top: 20px;
+  padding: 20px;
+  background-image: url("../images/bacground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__title {
+  margin: 0;
+  text-align: center;
+}

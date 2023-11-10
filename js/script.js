@@ -1,25 +1,24 @@
 console.log("Hello world!");
 
-let ratePLNEUR = 0.23;
-let ratePLNUSD = 0.25;
-let ratePLNGBP = 0.19;
-let rateEURPLN = 4.44;
-let rateEURUSD = 1.10;
-let rateEURGBP = 0.86;
-let rateUSDPLN = 4.05;
-let rateUSDEUR = 0.91;
-let rateUSDGBP = 0.78;
-let rateGBPPLN = 5.17;
-let rateGBPEUR = 1.16;
-let rateGBPUSD = 1.28;
+const inputSellElement = document.querySelector(".js-inputSell");
+const inputChargeElement = document.querySelector(".js-inputCharge");
+const selectSellElement = document.querySelector(".js-selectSell");
+const selectChargeElement = document.querySelector(".js-selectCharge");
 
-let inputSellElement = document.querySelector(".js-inputSell");
-let inputChargeElement = document.querySelector(".js-inputCharge");
-let selectSellElement = document.querySelector(".js-selectSell");
-let selectChargeElement = document.querySelector(".js-selectCharge");
-
-function setExchangeRate() {
-  let exchange = selectSellElement.value + selectChargeElement.value;
+const setExchangeRate = () => {
+  const ratePLNEUR = 0.23;
+  const ratePLNUSD = 0.25;
+  const ratePLNGBP = 0.19;
+  const rateEURPLN = 4.44;
+  const rateEURUSD = 1.10;
+  const rateEURGBP = 0.86;
+  const rateUSDPLN = 4.05;
+  const rateUSDEUR = 0.91;
+  const rateUSDGBP = 0.78;
+  const rateGBPPLN = 5.17;
+  const rateGBPEUR = 1.16;
+  const rateGBPUSD = 1.28;
+  const exchange = selectSellElement.value + selectChargeElement.value;
   switch (exchange) {
     case 'PLNEUR': window.exchangeRate = ratePLNEUR;
       break;
@@ -49,31 +48,30 @@ function setExchangeRate() {
   }
 };
 
-function sell() {
+const sell = () => {
   setExchangeRate();
-  let sellValue = +inputSellElement.value;
+  const sellValue = +inputSellElement.value;
   inputChargeElement.value = (sellValue * exchangeRate).toFixed(2);
 };
 
-function charge() {
+const charge = () => {
   setExchangeRate();
-  let chargeValue = +inputChargeElement.value;
+  const chargeValue = +inputChargeElement.value;
   inputSellElement.value = (chargeValue / exchangeRate).toFixed(2);
 };
 
-function setInputIndicate() {
+const setInputIndicate = () => {
   if (document.activeElement === inputSellElement) { window.inputIndicate = 'sell' };
   if (document.activeElement === inputChargeElement) { window.inputIndicate = 'charge' };
 };
 
 inputSellElement.addEventListener("input", () => {
-  sell();
-  setInputIndicate();
+  sell(), setInputIndicate();
 });
 
 inputChargeElement.addEventListener("input", () => {
-  charge();
-  setInputIndicate();
+  charge(), setInputIndicate();
+  
 });
 
 selectSellElement.addEventListener("change", () => {

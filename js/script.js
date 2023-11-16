@@ -5,6 +5,22 @@ const inputChargeElement = document.querySelector(".js-inputCharge");
 const selectSellElement = document.querySelector(".js-selectSell");
 const selectChargeElement = document.querySelector(".js-selectCharge");
 
+inputSellElement.addEventListener("input", () => {
+  sell(), setInputIndicate();
+});
+
+inputChargeElement.addEventListener("input", () => {
+  charge(), setInputIndicate();
+});
+
+selectSellElement.addEventListener("change", () => {
+  inputIndicate === 'sell' ? sell() : charge();
+});
+
+selectChargeElement.addEventListener("change", () => {
+  inputIndicate === 'sell' ? sell() : charge();
+});
+
 const setExchangeRate = () => {
   const ratePLNEUR = 0.23;
   const ratePLNUSD = 0.25;
@@ -64,20 +80,3 @@ const setInputIndicate = () => {
   if (document.activeElement === inputSellElement) { window.inputIndicate = 'sell' };
   if (document.activeElement === inputChargeElement) { window.inputIndicate = 'charge' };
 };
-
-inputSellElement.addEventListener("input", () => {
-  sell(), setInputIndicate();
-});
-
-inputChargeElement.addEventListener("input", () => {
-  charge(), setInputIndicate();
-  
-});
-
-selectSellElement.addEventListener("change", () => {
-  inputIndicate === 'sell' ? sell() : charge();
-});
-
-selectChargeElement.addEventListener("change", () => {
-  inputIndicate === 'sell' ? sell() : charge();
-});

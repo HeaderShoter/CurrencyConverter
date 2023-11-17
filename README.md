@@ -13,6 +13,11 @@ You can change marked currencies at any time. Then the program will immediately 
 If you want to check how much money you should spend to get the required amount of another currency, you can just type this amount in "Należność" and the program will display how much money you would spend to get it.
 ## Conventions used
 The entire site has been coded using BEM
+## Technologies used
+ - HTML
+ - CSS
+ - JavaScript ES6
+ - FlexBox
 ## Algorythm
 ```mermaid
 graph LR

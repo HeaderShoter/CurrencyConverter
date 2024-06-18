@@ -8,15 +8,15 @@ console.log("Hello world!");
   const setExchangeRate = () => {
     const ratePLNEUR = 0.23;
     const ratePLNUSD = 0.25;
-    const ratePLNGBP = 0.20;
-    const rateEURPLN = 4.33;
-    const rateEURUSD = 1.09;
-    const rateEURGBP = 0.86;
-    const rateUSDPLN = 3.97;
-    const rateUSDEUR = 0.92;
+    const ratePLNGBP = 0.19;
+    const rateEURPLN = 4.34;
+    const rateEURUSD = 1.07;
+    const rateEURGBP = 0.85;
+    const rateUSDPLN = 4.04;
+    const rateUSDEUR = 0.93;
     const rateUSDGBP = 0.79;
-    const rateGBPPLN = 5.05;
-    const rateGBPEUR = 1.17;
+    const rateGBPPLN = 5.13;
+    const rateGBPEUR = 1.18;
     const rateGBPUSD = 1.27;
     const exchange = selectSellElement.value + selectChargeElement.value;
     switch (exchange) {
